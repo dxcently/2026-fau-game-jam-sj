@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://5ne5f2v8xtmn"]
+
+[ext_resource type="Texture2D" uid="uid://boo2lesb1afig" path="res://table-with-3d-printer.png" id="1_kkuna"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4a3uf"]
+size = Vector2(22, 30)
+
+[node name="TableWith4dPrinter" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_4a3uf")
+
+[node name="TableWith3dPrinter" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_kkuna")
