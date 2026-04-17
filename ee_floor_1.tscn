@@ -749,8 +749,9 @@ position = Vector2(-1009, -679)
 position = Vector2(1229.0002, -2011.4993)
 scale = Vector2(5.251875, 5.6746874)
 color = Color(1, 1, 1, 0.90588236)
+energy = 1.25
 blend_mode = 1
-range_item_cull_mask = 2
+range_item_cull_mask = 3
 texture = ExtResource("11_inmib")
 texture_scale = 50.0
 
@@ -793,10 +794,10 @@ position = Vector2(-1029, -468)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1747355034]
 
 [node name="Reaction" parent="CanvasLayer" unique_id=1762320124 instance=ExtResource("9_q3r6w")]
-offset_left = 486.0
-offset_top = 247.0
-offset_right = 486.0
-offset_bottom = 247.0
+offset_left = 642.0
+offset_top = 336.0
+offset_right = 642.0
+offset_bottom = 336.0
 scale = Vector2(0.4399988, 0.47999936)
 size_flags_horizontal = 10
 size_flags_vertical = 2

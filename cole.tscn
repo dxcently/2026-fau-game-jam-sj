@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnj4ds1u4lfe6"]
+[gd_scene format=3 uid="uid://bnj4ds1u4lfe6"]
 
-[ext_resource type="Script" path="res://cole.gd" id="1_mhd61"]
+[ext_resource type="Script" uid="uid://dpuj0ogj882q7" path="res://cole.gd" id="1_mhd61"]
 [ext_resource type="Texture2D" uid="uid://xu0i3qmnytxf" path="res://hand.png" id="2_nq05x"]
 [ext_resource type="Texture2D" uid="uid://bbu47ipav0c6g" path="res://shoulder.png" id="3_r4i31"]
 [ext_resource type="Texture2D" uid="uid://dua1by551n1co" path="res://body.png" id="4_fo3sj"]
+[ext_resource type="Texture2D" uid="uid://bl8vlm6txbinm" path="res://light.png" id="5_nq05x"]
 
 [sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_8wtuj"]
 target_nodepath = NodePath("../HandTarget")
@@ -22,50 +23,58 @@ modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_8wtuj")
 radius = 97.0
 height = 316.0
 
-[node name="Cole" type="CharacterBody2D"]
+[node name="Cole" type="CharacterBody2D" unique_id=211549236]
 script = ExtResource("1_mhd61")
 
-[node name="Arm" type="Skeleton2D" parent="."]
+[node name="Arm" type="Skeleton2D" parent="." unique_id=884672282]
 position = Vector2(3, -2)
 modification_stack = SubResource("SkeletonModificationStack2D_qbvyj")
 
-[node name="Shoulder" type="Bone2D" parent="Arm"]
+[node name="Shoulder" type="Bone2D" parent="Arm" unique_id=1643358815]
 position = Vector2(-8.500015, -88)
 rotation = -2.1855357
 scale = Vector2(0.99999964, 0.99999964)
 rest = Transform2D(-0.9975446, 0.07002948, -0.07002948, -0.9975446, -8.500015, -88)
 metadata/_local_pose_override_enabled_ = true
 
-[node name="Hand" type="Bone2D" parent="Arm/Shoulder"]
+[node name="Hand" type="Bone2D" parent="Arm/Shoulder" unique_id=573652420]
 position = Vector2(42.019867, -13.089478)
 rotation = -0.4184184
 scale = Vector2(1.0000004, 1.0000004)
 rest = Transform2D(-0.25217578, -0.96768147, 0.96768147, -0.25217578, -49.500008, -72.00002)
 metadata/_local_pose_override_enabled_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder/Hand"]
+[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder/Hand" unique_id=5833489]
 position = Vector2(30.133533, 0.98495865)
 rotation = 1.208038
 texture = ExtResource("2_nq05x")
 
-[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder"]
+[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder" unique_id=119492761]
 position = Vector2(25.218746, -2.2394419)
 rotation = -3.1060927
 texture = ExtResource("3_r4i31")
 
-[node name="Body" type="Sprite2D" parent="."]
+[node name="Body" type="Sprite2D" parent="." unique_id=1374821710]
 position = Vector2(2.5, -1)
 texture = ExtResource("4_fo3sj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1856299175]
 visible = false
 position = Vector2(14, -12)
 shape = SubResource("CapsuleShape2D_pkg7o")
 
-[node name="HandTarget" type="Marker2D" parent="."]
+[node name="HandTarget" type="Marker2D" parent="." unique_id=1315979339]
 position = Vector2(-27, -199)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=533199593]
 scale = Vector2(1.0029892, 0.9788918)
 zoom = Vector2(2.2, 2.2)
 position_smoothing_enabled = true
+
+[node name="Light" type="PointLight2D" parent="." unique_id=704663532]
+position = Vector2(14, -11)
+color = Color(1, 1, 0.42352942, 0.21176471)
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.6901961)
+texture = ExtResource("5_nq05x")
+texture_scale = 6.0
