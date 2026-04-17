@@ -78,3 +78,5 @@ shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.6901961)
 texture = ExtResource("5_nq05x")
 texture_scale = 6.0
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=303571305]

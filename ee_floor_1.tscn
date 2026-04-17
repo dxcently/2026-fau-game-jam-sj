@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bl8vlm6txbinm" path="res://light.png" id="11_inmib"]
 [ext_resource type="PackedScene" uid="uid://ctavxt4ueohku" path="res://npc.tscn" id="12_gwrvv"]
 [ext_resource type="Texture2D" uid="uid://0xgq8p4jkf5d" path="res://aiden-body.png" id="13_ulk00"]
+[ext_resource type="AudioStream" uid="uid://1lcyldc4onrd" path="res://eetheme.wav" id="15_16vrv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hpf8r"]
 texture = ExtResource("2_v2v60")
@@ -744,7 +745,6 @@ position = Vector2(-770, -1571)
 scale = Vector2(4, 4)
 
 [node name="Lights" type="Node2D" parent="." unique_id=1100582954]
-visible = false
 position = Vector2(-1009, -679)
 
 [node name="Dark" type="PointLight2D" parent="Lights" unique_id=491417886]
@@ -818,5 +818,12 @@ offset_bottom = 336.0
 scale = Vector2(0.4399988, 0.47999936)
 size_flags_horizontal = 10
 size_flags_vertical = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=893378546]
+position = Vector2(-767, -4998)
+stream = ExtResource("15_16vrv")
+autoplay = true
+max_distance = 4000.0
+attenuation = 3.2490098
 
 [editable path="NPC2"]
