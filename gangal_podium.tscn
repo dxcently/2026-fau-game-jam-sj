@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2sqnt6q60m3j"]
+
+[ext_resource type="Texture2D" uid="uid://ccgob5iaxg7ir" path="res://gangal-hall-podium.png" id="1_v0wfp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0wfp"]
+
+[node name="Node2D" type="StaticBody2D"]
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v0wfp")
+
+[node name="GangalHallPodium" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("1_v0wfp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

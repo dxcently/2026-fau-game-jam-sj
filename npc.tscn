@@ -1,0 +1,32 @@
+[gd_scene load_steps=0 format=3 uid="uid://ctavxt4ueohku"]
+
+[ext_resource type="Texture2D" uid="uid://bywto4kvq2d0u" path="res://Anger.png" id="1_ideak"]
+[ext_resource type="Script" uid="uid://bc8m1ycy6mul2" path="res://npc.gd" id="1_xxcha"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxcha"]
+radius = 70.0
+height = 198.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ideak"]
+radius = 104.0
+height = 276.0
+
+[node name="NPC" type="CharacterBody2D" unique_id=1066110473]
+motion_mode = 1
+script = ExtResource("1_xxcha")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476045543]
+position = Vector2(14.000002, 0)
+scale = Vector2(0.11814516, 0.12244898)
+texture = ExtResource("1_ideak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1136111595]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_xxcha")
+
+[node name="Trigger" type="Area2D" parent="." unique_id=2034982577]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=865406456]
+shape = SubResource("CapsuleShape2D_ideak")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=335763481]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://hxplkn73um2x"]
+
+[ext_resource type="Texture2D" uid="uid://c3fvj12n4sbb4" path="res://gangal-hall-table.png" id="1_6djlr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hodcv"]
+radius = 80.305664
+
+[node name="gangal-hall-table" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hodcv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(6.5, 6.5)
+texture = ExtResource("1_6djlr")

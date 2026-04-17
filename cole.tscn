@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnj4ds1u4lfe6"]
+
+[ext_resource type="Script" path="res://cole.gd" id="1_mhd61"]
+[ext_resource type="Texture2D" uid="uid://xu0i3qmnytxf" path="res://hand.png" id="2_nq05x"]
+[ext_resource type="Texture2D" uid="uid://bbu47ipav0c6g" path="res://shoulder.png" id="3_r4i31"]
+[ext_resource type="Texture2D" uid="uid://dua1by551n1co" path="res://body.png" id="4_fo3sj"]
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_8wtuj"]
+target_nodepath = NodePath("../HandTarget")
+joint_one_bone_idx = 0
+joint_one_bone2d_node = NodePath("Shoulder")
+joint_two_bone_idx = 1
+joint_two_bone2d_node = NodePath("Shoulder/Hand")
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_qbvyj"]
+enabled = true
+strength = 0.587
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_8wtuj")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pkg7o"]
+radius = 97.0
+height = 316.0
+
+[node name="Cole" type="CharacterBody2D"]
+script = ExtResource("1_mhd61")
+
+[node name="Arm" type="Skeleton2D" parent="."]
+position = Vector2(3, -2)
+modification_stack = SubResource("SkeletonModificationStack2D_qbvyj")
+
+[node name="Shoulder" type="Bone2D" parent="Arm"]
+position = Vector2(-8.500015, -88)
+rotation = -2.1855357
+scale = Vector2(0.99999964, 0.99999964)
+rest = Transform2D(-0.9975446, 0.07002948, -0.07002948, -0.9975446, -8.500015, -88)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Hand" type="Bone2D" parent="Arm/Shoulder"]
+position = Vector2(42.019867, -13.089478)
+rotation = -0.4184184
+scale = Vector2(1.0000004, 1.0000004)
+rest = Transform2D(-0.25217578, -0.96768147, 0.96768147, -0.25217578, -49.500008, -72.00002)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder/Hand"]
+position = Vector2(30.133533, 0.98495865)
+rotation = 1.208038
+texture = ExtResource("2_nq05x")
+
+[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder"]
+position = Vector2(25.218746, -2.2394419)
+rotation = -3.1060927
+texture = ExtResource("3_r4i31")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(2.5, -1)
+texture = ExtResource("4_fo3sj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(14, -12)
+shape = SubResource("CapsuleShape2D_pkg7o")
+
+[node name="HandTarget" type="Marker2D" parent="."]
+position = Vector2(-27, -199)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1.0029892, 0.9788918)
+zoom = Vector2(2.2, 2.2)
+position_smoothing_enabled = true

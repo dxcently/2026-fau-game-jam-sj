@@ -1,0 +1,65 @@
+[gd_scene load_steps=0 format=3 uid="uid://b3rw2muvnkdx2"]
+
+[ext_resource type="Shader" uid="uid://cbxfeqa6orlac" path="res://vhs-glitch.gdshader" id="1_nkad7"]
+[ext_resource type="Texture2D" uid="uid://c5rn1n6k3lfvl" path="res://live_cole_reaction.png" id="2_66mds"]
+[ext_resource type="Texture2D" uid="uid://ceimdynwyqgtf" path="res://happy_cole.png" id="2_wowsn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_66mds"]
+shader = ExtResource("1_nkad7")
+shader_parameter/intensity = 0.5
+shader_parameter/glitch_frequency = 2.0
+shader_parameter/glitch_duration = 0.1
+shader_parameter/red_displacement = 0.02
+shader_parameter/green_displacement = 0.02
+shader_parameter/blue_displacement = 0.02
+shader_parameter/scanline_intensity = 0.3
+shader_parameter/noise_intensity = 0.2
+shader_parameter/slice_intensity = 0.4
+shader_parameter/ghost_intensity = 0.1
+shader_parameter/negative_intensity = 0.0
+
+[node name="Reaction" type="Control" unique_id=1917017385]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LiveColeReaction" type="TextureRect" parent="." unique_id=1260742475]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -370.5
+offset_right = 370.5
+offset_bottom = 106.0
+grow_horizontal = 2
+texture = ExtResource("2_66mds")
+
+[node name="Cole" type="TextureRect" parent="." unique_id=1227244053]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -48.0
+offset_right = 36.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+pivot_offset = Vector2(32, 64)
+texture = ExtResource("2_wowsn")
+
+[node name="GlitchShader" type="ColorRect" parent="." unique_id=484904067]
+material = SubResource("ShaderMaterial_66mds")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
