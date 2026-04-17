@@ -30,11 +30,14 @@ func _release_grip():
 	virtual_mouse_local = grab_anchor_global - shoulder.global_position
 	if virtual_mouse_local.length() > max_reach:
 		virtual_mouse_local = virtual_mouse_local.normalized() * max_reach
+	$Arm/Shoulder/Hand/CarpetNoise.play()
+
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("click"):
 		is_grabbing = true
 		grab_anchor_global = hand_target.global_position
+		$Arm/Shoulder/Hand/CarpetNoise.play()
 
 	# If we let go of the mouse, drop the grip
 	if Input.is_action_just_released("click") and is_grabbing:
