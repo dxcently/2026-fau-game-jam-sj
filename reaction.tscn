@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bokakanhv0ae8"]
+[gd_scene format=3 uid="uid://bokakanhv0ae8"]
 
-[ext_resource type="Shader" path="res://vhs-glitch.gdshader" id="1_nkad7"]
+[ext_resource type="Shader" uid="uid://cbxfeqa6orlac" path="res://vhs-glitch.gdshader" id="1_nkad7"]
 [ext_resource type="Texture2D" uid="uid://c5rn1n6k3lfvl" path="res://live_cole_reaction.png" id="2_66mds"]
 [ext_resource type="Texture2D" uid="uid://ceimdynwyqgtf" path="res://happy_cole.png" id="2_wowsn"]
 
@@ -18,7 +18,7 @@ shader_parameter/slice_intensity = 0.4
 shader_parameter/ghost_intensity = 0.1
 shader_parameter/negative_intensity = 0.0
 
-[node name="Reaction" type="Control"]
+[node name="Reaction" type="Control" unique_id=1818533439]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,36 +26,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LiveColeReaction" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -370.5
-offset_right = 370.5
-offset_bottom = 106.0
-grow_horizontal = 2
-texture = ExtResource("2_66mds")
-
-[node name="Cole" type="TextureRect" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=955388034]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -36.0
-offset_top = -48.0
-offset_right = 36.0
-offset_bottom = 48.0
+offset_left = -370.5
+offset_top = -255.0
+offset_right = 370.5
+offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(5, 5)
-pivot_offset = Vector2(32, 64)
+
+[node name="LiveColeReaction" type="TextureRect" parent="VBoxContainer" unique_id=1418242689]
+layout_mode = 2
+texture = ExtResource("2_66mds")
+
+[node name="Cole" type="TextureRect" parent="VBoxContainer" unique_id=1675669485]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 0
 texture = ExtResource("2_wowsn")
 
-[node name="GlitchShader" type="ColorRect" parent="."]
-top_level = true
+[node name="GlitchShader" type="ColorRect" parent="." unique_id=797012773]
 material = SubResource("ShaderMaterial_66mds")
 layout_mode = 1
 anchors_preset = 15

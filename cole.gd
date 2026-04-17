@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var mouse_sensitivity: float = 0.5 # Lower this if it's still too fast
+@export var mouse_sensitivity: float = 0.25
 @export var max_reach: float = 120.0 
-@export var drag_strength: float = 15.0 # How tight the body snaps to your mouse pulls
+@export var drag_strength: float = 10.0 # How tight the body snaps to your mouse pulls
 
 @onready var shoulder = $Arm/Shoulder
 @onready var hand_target = $HandTarget
@@ -54,6 +54,6 @@ func _physics_process(delta):
 		hand_target.global_position = shoulder.global_position + virtual_mouse_local
 		
 		# Smoothly slide to a stop when we let go (friction)
-		velocity = velocity.move_toward(Vector2.ZERO, 800 * delta)
+		velocity = velocity.move_toward(Vector2.ZERO, 10000 * delta)
 		
 	move_and_slide()
