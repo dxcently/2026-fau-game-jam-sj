@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dpuj0ogj882q7" path="res://cole.gd" id="1_mhd61"]
 [ext_resource type="Texture2D" uid="uid://xu0i3qmnytxf" path="res://hand.png" id="2_nq05x"]
+[ext_resource type="AudioStream" uid="uid://dluqnafxhblna" path="res://carpet.wav" id="2_r4i31"]
 [ext_resource type="Texture2D" uid="uid://bbu47ipav0c6g" path="res://shoulder.png" id="3_r4i31"]
 [ext_resource type="Texture2D" uid="uid://dua1by551n1co" path="res://body.png" id="4_fo3sj"]
 [ext_resource type="Texture2D" uid="uid://bl8vlm6txbinm" path="res://light.png" id="5_nq05x"]
@@ -25,6 +26,7 @@ height = 316.0
 
 [node name="Cole" type="CharacterBody2D" unique_id=211549236]
 script = ExtResource("1_mhd61")
+max_drag_speed = 150.0
 
 [node name="Arm" type="Skeleton2D" parent="." unique_id=884672282]
 position = Vector2(3, -2)
@@ -43,6 +45,13 @@ rotation = -0.4184184
 scale = Vector2(1.0000004, 1.0000004)
 rest = Transform2D(-0.25217578, -0.96768147, 0.96768147, -0.25217578, -49.500008, -72.00002)
 metadata/_local_pose_override_enabled_ = true
+
+[node name="CarpetNoise" type="AudioStreamPlayer2D" parent="Arm/Shoulder/Hand" unique_id=617559270]
+position = Vector2(-130.85852, -12.302361)
+rotation = 1.8661957
+stream = ExtResource("2_r4i31")
+max_distance = 20.0
+attenuation = 3.732131
 
 [node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder/Hand" unique_id=5833489]
 position = Vector2(30.133533, 0.98495865)
