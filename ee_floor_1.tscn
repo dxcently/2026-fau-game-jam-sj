@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cewkspaibsapt"]
+[gd_scene load_steps=9 format=3 uid="uid://cewkspaibsapt"]
 
 [ext_resource type="PackedScene" uid="uid://cdieo3u4c2int" path="res://building.tscn" id="1_hap6k"]
 [ext_resource type="PackedScene" uid="uid://dln88chn33vxp" path="res://jumpscare.tscn" id="6_v2v60"]
@@ -9,43 +9,60 @@
 [ext_resource type="Texture2D" uid="uid://bl8vlm6txbinm" path="res://light.png" id="11_inmib"]
 [ext_resource type="PackedScene" uid="uid://ctavxt4ueohku" path="res://npc.tscn" id="12_gwrvv"]
 
-[node name="Node2D" type="Node2D" unique_id=539075203]
+[node name="Node2D" type="Node2D"]
 texture_filter = 1
 
-[node name="Building" parent="." unique_id=615411833 instance=ExtResource("1_hap6k")]
+[node name="Building" parent="." instance=ExtResource("1_hap6k")]
 
 [node name="Cole" parent="." unique_id=1128328574 groups=["player"] instance=ExtResource("8_v2v60")]
 position = Vector2(-268, -975.99994)
 scale = Vector2(0.18, 0.18)
 
-[node name="Furniture" type="Node2D" parent="." unique_id=136231903]
+[node name="Furniture" type="Node2D" parent="."]
 
-[node name="podium" parent="Furniture" unique_id=141320835 instance=ExtResource("10_msoih")]
+[node name="podium" parent="Furniture" instance=ExtResource("10_msoih")]
 position = Vector2(-770, -1571)
 scale = Vector2(4, 4)
 
-[node name="gangal-hall-table" parent="Furniture" unique_id=1317862659 instance=ExtResource("9_hpf8r")]
-position = Vector2(-1029, -1010)
+[node name="gangal-hall-table" parent="Furniture" instance=ExtResource("9_hpf8r")]
+position = Vector2(-985, -982)
 
-[node name="gangal-hall-table2" parent="Furniture" unique_id=1635720468 instance=ExtResource("9_hpf8r")]
+[node name="gangal-hall-table2" parent="Furniture" instance=ExtResource("9_hpf8r")]
 position = Vector2(-1009, -1390)
 
-[node name="gangal-hall-table3" parent="Furniture" unique_id=1765629494 instance=ExtResource("9_hpf8r")]
+[node name="gangal-hall-table3" parent="Furniture" instance=ExtResource("9_hpf8r")]
 position = Vector2(-556, -1398)
 
-[node name="gangal-hall-table5" parent="Furniture" unique_id=1009986517 instance=ExtResource("9_hpf8r")]
+[node name="gangal-hall-table5" parent="Furniture" instance=ExtResource("9_hpf8r")]
 position = Vector2(-1009, -104)
 
-[node name="gangal-hall-table6" parent="Furniture" unique_id=1951022594 instance=ExtResource("9_hpf8r")]
+[node name="gangal-hall-table6" parent="Furniture" instance=ExtResource("9_hpf8r")]
 position = Vector2(-732, -1205)
 
-[node name="gangal-hall-table4" parent="Furniture" unique_id=1801124214 instance=ExtResource("9_hpf8r")]
+[node name="gangal-hall-table4" parent="Furniture" instance=ExtResource("9_hpf8r")]
 position = Vector2(-472, -1011)
 
-[node name="Lights" type="Node2D" parent="." unique_id=1288898066]
+[node name="TableWith4dPrinter" parent="Furniture" instance=ExtResource("5_v2v60")]
+position = Vector2(-1750, -417.00003)
+scale = Vector2(5, 5)
+
+[node name="TableWith4dPrinter2" parent="Furniture" instance=ExtResource("5_v2v60")]
+position = Vector2(-1751, -586)
+scale = Vector2(5, 5)
+
+[node name="TableWith4dPrinter3" parent="Furniture" instance=ExtResource("5_v2v60")]
+position = Vector2(-1751.0001, -752)
+scale = Vector2(5, 5)
+
+[node name="TableWith4dPrinter4" parent="Furniture" instance=ExtResource("5_v2v60")]
+position = Vector2(-1749.0001, -920.99994)
+scale = Vector2(5, 5)
+
+[node name="Lights" type="Node2D" parent="."]
+visible = false
 position = Vector2(-1009, -679)
 
-[node name="Dark" type="PointLight2D" parent="Lights" unique_id=2145834483]
+[node name="Dark" type="PointLight2D" parent="Lights"]
 position = Vector2(1913, -1381)
 scale = Vector2(5.251875, 5.6746874)
 color = Color(1, 1, 1, 0.90588236)
@@ -55,7 +72,7 @@ range_item_cull_mask = 3
 texture = ExtResource("11_inmib")
 texture_scale = 50.0
 
-[node name="Light" type="PointLight2D" parent="Lights" unique_id=439313385]
+[node name="Light" type="PointLight2D" parent="Lights"]
 position = Vector2(473, 193)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -63,7 +80,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light2" type="PointLight2D" parent="Lights" unique_id=129386447]
+[node name="Light2" type="PointLight2D" parent="Lights"]
 position = Vector2(-1052, -422)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -72,7 +89,7 @@ shadow_color = Color(0, 0, 0, 0.6901961)
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light3" type="PointLight2D" parent="Lights" unique_id=785868014]
+[node name="Light3" type="PointLight2D" parent="Lights"]
 position = Vector2(1020, -278)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -80,7 +97,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light4" type="PointLight2D" parent="Lights" unique_id=711016982]
+[node name="Light4" type="PointLight2D" parent="Lights"]
 position = Vector2(740, 559)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -88,7 +105,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light5" type="PointLight2D" parent="Lights" unique_id=506302661]
+[node name="Light5" type="PointLight2D" parent="Lights"]
 position = Vector2(734, -10)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -96,7 +113,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light6" type="PointLight2D" parent="Lights" unique_id=2071707537]
+[node name="Light6" type="PointLight2D" parent="Lights"]
 position = Vector2(593, -1401)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -104,7 +121,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light7" type="PointLight2D" parent="Lights" unique_id=2141374966]
+[node name="Light7" type="PointLight2D" parent="Lights"]
 position = Vector2(319, -1277)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -112,15 +129,15 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light8" type="PointLight2D" parent="Lights" unique_id=557931379]
+[node name="Light8" type="PointLight2D" parent="Lights"]
 position = Vector2(96, 733)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
 shadow_enabled = true
-texture = ExtResource("11_inmib")
+; texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light9" type="PointLight2D" parent="Lights" unique_id=1555969056]
+[node name="Light9" type="PointLight2D" parent="Lights"]
 position = Vector2(-417, 725)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -128,7 +145,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light10" type="PointLight2D" parent="Lights" unique_id=883688622]
+[node name="Light10" type="PointLight2D" parent="Lights"]
 position = Vector2(-128, 746)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -136,7 +153,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light11" type="PointLight2D" parent="Lights" unique_id=903308457]
+[node name="Light11" type="PointLight2D" parent="Lights"]
 position = Vector2(-782, 966)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -144,7 +161,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light12" type="PointLight2D" parent="Lights" unique_id=735513012]
+[node name="Light12" type="PointLight2D" parent="Lights"]
 position = Vector2(331, -3882)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -152,7 +169,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light13" type="PointLight2D" parent="Lights" unique_id=827406804]
+[node name="Light13" type="PointLight2D" parent="Lights"]
 position = Vector2(-559, -3824)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -160,7 +177,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light14" type="PointLight2D" parent="Lights" unique_id=1610526990]
+[node name="Light14" type="PointLight2D" parent="Lights"]
 position = Vector2(-672, -4480)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -168,7 +185,7 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Light15" type="PointLight2D" parent="Lights" unique_id=1585404061]
+[node name="Light15" type="PointLight2D" parent="Lights"]
 position = Vector2(178.78815, 538.3379)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
@@ -184,12 +201,12 @@ position = Vector2(-457, -536)
 [node name="NPC" parent="." unique_id=1349925854 instance=ExtResource("12_gwrvv")]
 position = Vector2(-1029, -468)
 
-[node name="NPC2" parent="." unique_id=1066110473 instance=ExtResource("12_gwrvv")]
+[node name="NPC2" parent="." instance=ExtResource("12_gwrvv")]
 position = Vector2(-26, -390)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=826052091]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Reaction" parent="CanvasLayer" unique_id=411991060 instance=ExtResource("9_q3r6w")]
+[node name="Reaction" parent="CanvasLayer" instance=ExtResource("9_q3r6w")]
 offset_left = 642.0
 offset_top = 336.0
 offset_right = 642.0
