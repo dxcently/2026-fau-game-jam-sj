@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dln88chn33vxp"]
+[gd_scene load_steps=0 format=3 uid="uid://dln88chn33vxp"]
 
 [ext_resource type="Script" uid="uid://duj0he4hfqmnh" path="res://jumpscare.gd" id="1_dkw4f"]
 [ext_resource type="Texture2D" uid="uid://boacyy6xxswuy" path="res://furry.png" id="1_lc0cw"]
