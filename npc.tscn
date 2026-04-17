@@ -5,12 +5,12 @@
 [ext_resource type="AudioStream" uid="uid://gui6ih0hrm83" path="res://huffing.wav" id="3_kh24r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxcha"]
-radius = 70.0
-height = 198.0
+radius = 37.0
+height = 112.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ideak"]
-radius = 104.0
-height = 276.0
+radius = 67.0
+height = 134.0
 
 [node name="NPC" type="CharacterBody2D" unique_id=1066110473]
 motion_mode = 1
