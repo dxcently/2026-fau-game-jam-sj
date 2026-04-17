@@ -77,7 +77,7 @@ position = Vector2(-27, -199)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=533199593]
 scale = Vector2(1.0029892, 0.9788918)
-zoom = Vector2(2.2, 2.2)
+zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
 [node name="Light" type="PointLight2D" parent="." unique_id=704663532]
@@ -86,6 +86,6 @@ color = Color(1, 1, 0.42352942, 0.21176471)
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.6901961)
 texture = ExtResource("5_nq05x")
-texture_scale = 6.0
+texture_scale = 8.0
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=303571305]
