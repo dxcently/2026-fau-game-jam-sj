@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cewkspaibsapt"]
+[gd_scene load_steps=10 format=3 uid="uid://cewkspaibsapt"]
 
 [ext_resource type="PackedScene" uid="uid://cdieo3u4c2int" path="res://building.tscn" id="1_hap6k"]
+[ext_resource type="PackedScene" uid="uid://5ne5f2v8xtmn" path="res://table_with_4d_printer.tscn" id="5_v2v60"]
 [ext_resource type="PackedScene" uid="uid://dln88chn33vxp" path="res://jumpscare.tscn" id="6_v2v60"]
 [ext_resource type="PackedScene" uid="uid://bnj4ds1u4lfe6" path="res://cole.tscn" id="8_v2v60"]
 [ext_resource type="PackedScene" uid="uid://hxplkn73um2x" path="res://gangal-hall-table.tscn" id="9_hpf8r"]
@@ -14,8 +15,8 @@ texture_filter = 1
 
 [node name="Building" parent="." instance=ExtResource("1_hap6k")]
 
-[node name="Cole" parent="." unique_id=1128328574 groups=["player"] instance=ExtResource("8_v2v60")]
-position = Vector2(-268, -975.99994)
+[node name="Cole" parent="." instance=ExtResource("8_v2v60")]
+position = Vector2(-271, 19.000061)
 scale = Vector2(0.18, 0.18)
 
 [node name="Furniture" type="Node2D" parent="."]
@@ -59,7 +60,6 @@ position = Vector2(-1749.0001, -920.99994)
 scale = Vector2(5, 5)
 
 [node name="Lights" type="Node2D" parent="."]
-visible = false
 position = Vector2(-1009, -679)
 
 [node name="Dark" type="PointLight2D" parent="Lights"]
@@ -134,7 +134,7 @@ position = Vector2(96, 733)
 color = Color(1, 1, 0.42352942, 0.21176471)
 energy = 1.44
 shadow_enabled = true
-; texture = ExtResource("11_inmib")
+texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
 [node name="Light9" type="PointLight2D" parent="Lights"]
@@ -193,13 +193,8 @@ shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
 
-[node name="Jumpscares" type="Node2D" parent="." unique_id=1891225657]
-
-[node name="Jumpscare" parent="Jumpscares" unique_id=1042748119 instance=ExtResource("6_v2v60")]
-position = Vector2(-457, -536)
-
-[node name="NPC" parent="." unique_id=1349925854 instance=ExtResource("12_gwrvv")]
-position = Vector2(-1029, -468)
+[node name="NPC" parent="." instance=ExtResource("12_gwrvv")]
+position = Vector2(-1038, -708)
 
 [node name="NPC2" parent="." instance=ExtResource("12_gwrvv")]
 position = Vector2(-26, -390)
@@ -214,3 +209,15 @@ offset_bottom = 336.0
 scale = Vector2(0.4399988, 0.47999936)
 size_flags_horizontal = 10
 size_flags_vertical = 2
+
+[node name="Jumpscare" parent="." instance=ExtResource("6_v2v60")]
+position = Vector2(-1717, 113)
+
+[node name="Jumpscare2" parent="." instance=ExtResource("6_v2v60")]
+position = Vector2(21, -934)
+
+[node name="Jumpscare3" parent="." instance=ExtResource("6_v2v60")]
+position = Vector2(-560, -1948)
+
+[node name="Jumpscare4" parent="." instance=ExtResource("6_v2v60")]
+position = Vector2(-1694, -5250)

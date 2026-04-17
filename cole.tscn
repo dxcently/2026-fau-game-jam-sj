@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bnj4ds1u4lfe6"]
+[gd_scene load_steps=10 format=3 uid="uid://bnj4ds1u4lfe6"]
 
 [ext_resource type="Script" uid="uid://dpuj0ogj882q7" path="res://cole.gd" id="1_mhd61"]
 [ext_resource type="Texture2D" uid="uid://xu0i3qmnytxf" path="res://hand.png" id="2_nq05x"]
@@ -24,63 +24,63 @@ modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_8wtuj")
 radius = 97.0
 height = 316.0
 
-[node name="Cole" type="CharacterBody2D" unique_id=211549236]
+[node name="Cole" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_mhd61")
 max_drag_speed = 150.0
 
-[node name="Arm" type="Skeleton2D" parent="." unique_id=884672282]
+[node name="Arm" type="Skeleton2D" parent="."]
 position = Vector2(3, -2)
 modification_stack = SubResource("SkeletonModificationStack2D_qbvyj")
 
-[node name="Shoulder" type="Bone2D" parent="Arm" unique_id=1643358815]
+[node name="Shoulder" type="Bone2D" parent="Arm"]
 position = Vector2(-8.500015, -88)
 rotation = -2.1855357
 scale = Vector2(0.99999964, 0.99999964)
 rest = Transform2D(-0.9975446, 0.07002948, -0.07002948, -0.9975446, -8.500015, -88)
 metadata/_local_pose_override_enabled_ = true
 
-[node name="Hand" type="Bone2D" parent="Arm/Shoulder" unique_id=573652420]
+[node name="Hand" type="Bone2D" parent="Arm/Shoulder"]
 position = Vector2(42.019867, -13.089478)
 rotation = -0.4184184
 scale = Vector2(1.0000004, 1.0000004)
 rest = Transform2D(-0.25217578, -0.96768147, 0.96768147, -0.25217578, -49.500008, -72.00002)
 metadata/_local_pose_override_enabled_ = true
 
-[node name="CarpetNoise" type="AudioStreamPlayer2D" parent="Arm/Shoulder/Hand" unique_id=617559270]
+[node name="CarpetNoise" type="AudioStreamPlayer2D" parent="Arm/Shoulder/Hand"]
 position = Vector2(-130.85852, -12.302361)
 rotation = 1.8661957
 stream = ExtResource("2_r4i31")
 max_distance = 20.0
 attenuation = 3.732131
 
-[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder/Hand" unique_id=5833489]
+[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder/Hand"]
 position = Vector2(30.133533, 0.98495865)
 rotation = 1.208038
 texture = ExtResource("2_nq05x")
 
-[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder" unique_id=119492761]
+[node name="Sprite2D" type="Sprite2D" parent="Arm/Shoulder"]
 position = Vector2(25.218746, -2.2394419)
 rotation = -3.1060927
 texture = ExtResource("3_r4i31")
 
-[node name="Body" type="Sprite2D" parent="." unique_id=1374821710]
+[node name="Body" type="Sprite2D" parent="."]
 position = Vector2(2.5, -1)
 texture = ExtResource("4_fo3sj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1856299175]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(14, -12)
 shape = SubResource("CapsuleShape2D_pkg7o")
 
-[node name="HandTarget" type="Marker2D" parent="." unique_id=1315979339]
+[node name="HandTarget" type="Marker2D" parent="."]
 position = Vector2(-27, -199)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=533199593]
+[node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(1.0029892, 0.9788918)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
-[node name="Light" type="PointLight2D" parent="." unique_id=704663532 groups=["player"]]
+[node name="Light" type="PointLight2D" parent="." groups=["player"]]
 position = Vector2(14, -11)
 color = Color(1, 1, 0.42352942, 0.21176471)
 shadow_enabled = true
@@ -88,4 +88,4 @@ shadow_color = Color(0, 0, 0, 0.6901961)
 texture = ExtResource("5_nq05x")
 texture_scale = 8.0
 
-[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=303571305]
+[node name="AudioListener2D" type="AudioListener2D" parent="."]

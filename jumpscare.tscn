@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://dln88chn33vxp"]
+[gd_scene load_steps=5 format=3 uid="uid://dln88chn33vxp"]
 
 [ext_resource type="Script" uid="uid://duj0he4hfqmnh" path="res://jumpscare.gd" id="1_dkw4f"]
 [ext_resource type="Texture2D" uid="uid://boacyy6xxswuy" path="res://furry.png" id="1_lc0cw"]
@@ -6,15 +6,16 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7h4b0"]
 
-[node name="Jumpscare" type="Area2D" unique_id=1042748119]
+[node name="Jumpscare" type="Area2D"]
 script = ExtResource("1_dkw4f")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=529796936]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7h4b0")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1317186540]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_6rciv")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=884591951]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("1_lc0cw")
