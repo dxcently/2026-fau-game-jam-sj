@@ -717,8 +717,8 @@ godot_4_3_compatibility = false
 metadata/_custom_type_script = "uid://cjk8nronimk5r"
 
 [node name="Cole" parent="." instance=ExtResource("8_v2v60")]
-position = Vector2(-273, -1004)
-scale = Vector2(0.27648085, 0.27648085)
+position = Vector2(-268, -975.99994)
+scale = Vector2(0.18, 0.18)
 
 [node name="gangal-hall-table" parent="." instance=ExtResource("9_hpf8r")]
 position = Vector2(-1029, -1010)
@@ -746,6 +746,7 @@ scale = Vector2(4, 4)
 position = Vector2(-1009, -679)
 
 [node name="Dark" type="PointLight2D" parent="Lights"]
+visible = false
 position = Vector2(1913, -1381)
 scale = Vector2(5.251875, 5.6746874)
 color = Color(1, 1, 1, 0.90588236)
