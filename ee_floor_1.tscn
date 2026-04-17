@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c2sqnt6q60m3j" path="res://gangal_podium.tscn" id="10_msoih"]
 [ext_resource type="Texture2D" uid="uid://bl8vlm6txbinm" path="res://light.png" id="11_inmib"]
 [ext_resource type="PackedScene" uid="uid://ctavxt4ueohku" path="res://npc.tscn" id="12_gwrvv"]
+[ext_resource type="Texture2D" uid="uid://0xgq8p4jkf5d" path="res://aiden-body.png" id="13_ulk00"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hpf8r"]
 texture = ExtResource("2_v2v60")
@@ -816,6 +817,18 @@ texture_scale = 5.0
 [node name="NPC" parent="." unique_id=1645967022 instance=ExtResource("12_gwrvv")]
 position = Vector2(-1029, -468)
 
+[node name="NPC2" parent="." unique_id=1066110473 instance=ExtResource("12_gwrvv")]
+position = Vector2(-26, -390)
+
+[node name="Sprite2D" parent="NPC2" index="0" unique_id=1476045543]
+texture = ExtResource("13_ulk00")
+
+[node name="CollisionShape2D" parent="NPC2" index="1" unique_id=1136111595]
+position = Vector2(12, 6)
+
+[node name="CollisionShape2D" parent="NPC2/Trigger" parent_id_path=PackedInt32Array(1066110473, 2034982577) index="0" unique_id=865406456]
+position = Vector2(14, 6)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=826052091]
 
 [node name="Reaction" parent="CanvasLayer" unique_id=411991060 instance=ExtResource("9_q3r6w")]
@@ -826,3 +839,5 @@ offset_bottom = 336.0
 scale = Vector2(0.4399988, 0.47999936)
 size_flags_horizontal = 10
 size_flags_vertical = 2
+
+[editable path="NPC2"]
