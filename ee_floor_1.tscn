@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ctavxt4ueohku" path="res://npc.tscn" id="12_gwrvv"]
 [ext_resource type="Texture2D" uid="uid://0xgq8p4jkf5d" path="res://aiden-body.png" id="13_ulk00"]
 [ext_resource type="AudioStream" uid="uid://1lcyldc4onrd" path="res://eetheme.wav" id="15_16vrv"]
+[ext_resource type="AudioStream" uid="uid://dek8ex0idhyr6" path="res://buzz.mp3" id="16_8xke5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hpf8r"]
 texture = ExtResource("2_v2v60")
@@ -825,5 +826,10 @@ stream = ExtResource("15_16vrv")
 autoplay = true
 max_distance = 4000.0
 attenuation = 3.2490098
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=430918227]
+stream = ExtResource("16_8xke5")
+autoplay = true
+parameters/looping = true
 
 [editable path="NPC2"]
