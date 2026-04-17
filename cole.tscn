@@ -25,6 +25,7 @@ height = 316.0
 
 [node name="Cole" type="CharacterBody2D" unique_id=211549236]
 script = ExtResource("1_mhd61")
+max_drag_speed = 150.0
 
 [node name="Arm" type="Skeleton2D" parent="." unique_id=884672282]
 position = Vector2(3, -2)
