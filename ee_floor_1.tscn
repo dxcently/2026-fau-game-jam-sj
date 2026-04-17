@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cewkspaibsapt"]
 
 [ext_resource type="PackedScene" uid="uid://cdieo3u4c2int" path="res://building.tscn" id="1_hap6k"]
+[ext_resource type="PackedScene" uid="uid://dln88chn33vxp" path="res://jumpscare.tscn" id="6_v2v60"]
 [ext_resource type="PackedScene" uid="uid://bnj4ds1u4lfe6" path="res://cole.tscn" id="8_v2v60"]
 [ext_resource type="PackedScene" uid="uid://hxplkn73um2x" path="res://gangal-hall-table.tscn" id="9_hpf8r"]
 [ext_resource type="PackedScene" uid="uid://bokakanhv0ae8" path="res://reaction.tscn" id="9_q3r6w"]
@@ -13,7 +14,7 @@ texture_filter = 1
 
 [node name="Building" parent="." unique_id=615411833 instance=ExtResource("1_hap6k")]
 
-[node name="Cole" parent="." unique_id=1128328574 instance=ExtResource("8_v2v60")]
+[node name="Cole" parent="." unique_id=1128328574 groups=["player"] instance=ExtResource("8_v2v60")]
 position = Vector2(-268, -975.99994)
 scale = Vector2(0.18, 0.18)
 
@@ -174,6 +175,11 @@ energy = 1.44
 shadow_enabled = true
 texture = ExtResource("11_inmib")
 texture_scale = 5.0
+
+[node name="Jumpscares" type="Node2D" parent="." unique_id=1891225657]
+
+[node name="Jumpscare" parent="Jumpscares" unique_id=1042748119 instance=ExtResource("6_v2v60")]
+position = Vector2(-457, -536)
 
 [node name="NPC" parent="." unique_id=1349925854 instance=ExtResource("12_gwrvv")]
 position = Vector2(-1029, -468)

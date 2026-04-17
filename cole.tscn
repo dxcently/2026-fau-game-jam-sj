@@ -80,7 +80,7 @@ scale = Vector2(1.0029892, 0.9788918)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
-[node name="Light" type="PointLight2D" parent="." unique_id=704663532]
+[node name="Light" type="PointLight2D" parent="." unique_id=704663532 groups=["player"]]
 position = Vector2(14, -11)
 color = Color(1, 1, 0.42352942, 0.21176471)
 shadow_enabled = true
